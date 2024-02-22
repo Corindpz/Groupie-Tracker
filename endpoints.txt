@@ -1,0 +1,20 @@
+ENDpoints :
+
+
+Image carte :
+
+Nom : https://api.pokemontcg.io/v2/cards/<id>
+
+Type : https://api.pokemontcg.io/v2/types
+
+Sous Types : https://api.pokemontcg.io/v2/subtypes
+
+Super Types : https://api.pokemontcg.io/v2/supertypes
+
+Rareté : https://api.pokemontcg.io/v2/rarities
+
+Prix :
+
+Set : https://api.pokemontcg.io/v2/sets/<id>
+
+Chercher : https://api.pokemontcg.io/v2/cards
