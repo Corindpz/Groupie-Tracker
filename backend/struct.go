@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package backend
 
 type Pricing struct {
@@ -25,3 +26,6 @@ type Bundle struct {
 	Asset           string    `json:"asset"`
 }
 
+=======
+package backend
+>>>>>>> 5009e5137a04e6fbc208e7da539cf3e916a6bf7c

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package backend
 
 import (
@@ -20,3 +21,6 @@ func FetchStoreData(apiURL string) ([]Bundle, error) {
 
 	return bundles, nil
 }
+=======
+package backend
+>>>>>>> 5009e5137a04e6fbc208e7da539cf3e916a6bf7c
