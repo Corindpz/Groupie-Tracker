@@ -1,0 +1,62 @@
+{{define "rota"}}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/rota.css">
+    <title>Rotation</title>
+</head>
+<body>
+    <div class="header">
+        <a href="/accueil"><img class="logo" src="/static/images/lego.png" alt="accueil"></a>
+        <h1 class="titre">Apex Tracker</h1>
+        <p class="github"><img class="icons" src="static/images/github.png" > Corindpz</p>
+    </div>
+    <div class="container">
+        <h2>Rotation des maps :</h2>
+
+
+        <h3>Prochaine rotation de la carte:</h3>
+        <p>Carte: {{.Next.Map}}</p>
+        <img class="maps" src="/static/images/{{.Next.Map}}.png">
+
+        <!-- Affichage du timer -->
+        <h3>Temps restant avant rotation :</h3>
+        <img src="static/images/phoenix.webp" ><div id="timer"></div></img>
+    </div>
+
+    <script>
+        // Récupération de la date de fin de rotation depuis GoLang
+        const targetDate = new Date("{{.Current.ReadableDateEnd}}");
+        targetDate.setHours(targetDate.getHours() + 7);
+
+        // Fonction pour calculer la différence et mettre à jour l'élément HTML
+        function updateTimer() {
+            const currentDate = new Date();
+            const difference = targetDate - currentDate;
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (difference <= 0) {
+                clearInterval(timerInterval);
+                document.getElementById("timer").innerHTML = "Expired";
+            }
+        }
+
+        // Appel initial de la fonction pour afficher le timer dès le chargement de la page
+        updateTimer();
+
+        // Mise à jour du timer chaque seconde
+        const timerInterval = setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
+{{end}}

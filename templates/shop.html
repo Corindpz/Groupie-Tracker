@@ -4,69 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/shop.css">
     <title>Shop</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        h1 {
-            color: #333;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-        }
-
-        .bundle {
-            border: 1px solid #ccc;
-            margin: 10px;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .bundle img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        .bundle h2 {
-            color: #555;
-        }
-
-        .pricing {
-            margin-top: 10px;
-        }
-
-        .pricing p {
-            margin: 5px 0;
-        }
-
-        .content {
-            margin-top: 10px;
-        }
-
-        .content p {
-            margin: 5px 0;
-        }
-    </style>
+    
+  
 </head>
 <body>
-    <h1>Shop</h1>
+    <div class="header">
+        <a href="/accueil"><img class="logo" src="/static/images/lego.png" alt="accueil"></a>
+        <h1  class="titre">Apex Tracker</h1>
+        <p class="github"><img class="icons" src="static/images/github.png" > Corindpz</p>
+    </div>
+    <h2>Boutique :</h2>
     {{range .}}
+    <div class="container">
         <div class="bundle">
-            <img src="{{.Asset}}" alt="{{.Title}}">
+            <img class="article" src="{{.Asset}}" alt="{{.Title}}">
             <h2>{{.Title}}</h2>
-            <p>{{.Desc}}</p>
-            <p>Price: {{with index .Pricing 0}}{{.Quantity}} {{.Ref}}{{end}}</p>
-            <p>Offer ID: {{.OfferID}}</p>
+            
+            <p >Prix:  {{with index .Pricing 0}}{{.Quantity}} <img class="coins" src="static/images/apex.png">{{end}}</p>
             <div class="content">
-                <h3>Content:</h3>
+                <h3>Contenu:</h3>
                 {{range .Content}}
-                    <p>{{.Name}} ({{.Quantity}}x) - {{.Ref}}</p>
+                    <p>{{.Name}} ({{.Quantity}}x) </p>
                 {{end}}
             </div>
         </div>
+    </div>
     {{end}}
 </body>
 </html>

@@ -1,0 +1,32 @@
+{{define "info"}}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/predict.css">
+    <title>Accueil</title>
+</head>
+<body>
+
+    <div class="header">
+        <a href="/accueil"><img class="logo" src="/static/images/lego.png" alt="accueil"></a>
+        <h1 class="titre">Apex Tracker</h1>
+        <p class="github"><img class="icons" src="static/images/github.png" > Corindpz</p>
+    </div>
+    <div class="container">
+
+        <div class="bandeau">
+            <h2>Pourrez vous prédire la zone ?</h2>
+
+        </div>
+        <div class="centered-container">
+         <iframe src="https://predict-the-ring.onrender.com/" style="border: none;" scrolling="no">
+         </iframe>
+        </div>
+    </div>
+</body>
+</html>
+{{end}}

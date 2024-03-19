@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+}
+
+html {
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  color: white;
+  background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1,1,70,1) 35%);
+}
+
+h1 {
+    font-size: 6em;
+    font-weight: 400;
+    margin-top: 1.3vh;
+    padding: 0.5vh;
+    color: white;
+}
+
+.logo {
+    width: 9vh;
+    height: 9vh;
+    margin: 2vh;
+}
+
+
+
+.header {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1,1,70,1) 35%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-bottom:  10px solid white;
+}
+
+.github{
+    font-size: 20px;
+    padding: 3vh;
+    margin-right: 1vh;
+    color: white;
+    margin-top: 3vh;
+}
+
+.icons{
+    filter: invert(1);
+}
+
+h2{
+    font-size: 4em;
+    position: relative;
+    margin-left: 3vh;
+    top: 30%;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+p{
+    font-size: 3vh;
+    margin-top: 6vh;
+    padding: 3vh;
+    display: flex;
+    align-items: center;
+}
+
+h3{
+    font-size: 3.5vh;
+    margin-left: 0.2vh;
+    padding-top: 3vh;
+}
+
+.coins{
+    width: 6vh;
+    
+    padding: 1vh;
+    margin-right: 3vh;
+    margin-top: 2vh;
+}
+
+.article {
+    border: solid 5px white;
+    border-radius: 15px;
+    margin: 4vh;
+}
+
+.bundle{
+    border-bottom: 5px solid rgb(206, 15, 15);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.content{
+    margin-right: 5vh;
+}
+

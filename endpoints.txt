@@ -14,11 +14,12 @@ rotation des maps : https://api.mozambiquehe.re/maprotation?auth= + CLE_API
 nombre de rp et ap pour etre predator sur chaque plateforme + nb preda et master sur chaque plateforme : https://api.mozambiquehe.re/predator?auth= + CLE_API
 
 
-stats joueur : https://api.mozambiquehe.re/bridge?auth= + CLE_API &player= + NOM_EA + &platform= + (PC, X1, PS4, SWITCH)
+stats joueur : https://api.mozambiquehe.re/bridge?auth=96b5ef5aff1825ee880530ccf48efd82&player=Tokah1_a&platform=PC
 --> UID
 
-stats joueur par id : https://api.mozambiquehe.re/bridge?auth= + CLE_API &uid= + UID + &platform= + (PC, X1, PS4, SWITCH)
---> NOM
 
-Historique match : https://api.mozambiquehe.re/games?auth= + CLE_API + &uid= + UID
+filtre : shop/ldb
+
+favoris : joueurs
+
 
