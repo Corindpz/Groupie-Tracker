@@ -10,6 +10,15 @@
     <title>Accueil</title>
 </head>
 <body>
+    <script>
+      var sleepSetTimeout_ctrl;
+
+    function sleep(ms) {
+    clearInterval(sleepSetTimeout_ctrl);
+    return new Promise(resolve => sleepSetTimeout_ctrl = setTimeout(resolve, ms));
+    }
+    sleep(30000);
+    </script>
 
     <div class="header">
         <a href="/accueil"><img class="logo" src="/static/images/lego.png" alt="accueil"></a>

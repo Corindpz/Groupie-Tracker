@@ -6,19 +6,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
-    <title>Document</title>
+<link rel="stylesheet" href="/static/css/news.css">
+    <title>news</title>
 </head>
 <body>
-    <h1>News</h1>
-    <ul>
-    {{range .}}
-        <li>
-            <a href="{{.Link}}"><img src="{{.ImageURL}}" alt="{{.Title}}"></a>
-            <h2>{{.Title}}</h2>
-            <p>{{.ShortDesc}}</p>
-        </li>
-    {{end}}
-    </ul>
+    
+    <div class="header">
+        <a href="/accueil"><img class="logo" src="/static/images/lego.png" alt="accueil"></a>
+        <h1  class="titre">Apex Tracker</h1>
+        <p class="github"><img class="icons" src="static/images/github.png" > Corindpz</p>
+    </div>
+    <h2 class="titre">News</h2>
+    <div class="container">
+        <ul>
+        {{range .News}}
+         <li>
+              <a href="{{.Link}}" target="_blank"><img class="news" src="{{.ImageURL}}" alt="{{.Title}}"></a>
+             <h2 class="article">{{.Title}}</h2>
+             <p>{{.ShortDesc}}</p>
+         </li>
+        {{end}}
+         </ul>
+    </div>
+    <div class="prev">
+     <a class="pagi" href="{{.PagePrev}}"><img class="iconsleft" src="/static/images/left.png">Prev</a>
+     <a class="pagi" href="{{.PageNext}}">Next<img class="iconsright" src="/static/images/right.png"> </a>
+    </div>
+
 </body>
 </html>
 {{end}}

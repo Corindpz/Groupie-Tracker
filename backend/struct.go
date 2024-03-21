@@ -33,6 +33,12 @@ type News struct {
 	ShortDesc  string `json:"short_desc"`
 }
 
+type NewsData struct {
+	News []News `json:"news"`
+	PageNext string `json:"next"`
+	PagePrev string `json:"prev"`
+}
+
 type RankData struct {
     FoundRank             int    `json:"foundRank"`
     Val                   int    `json:"val"`
@@ -71,4 +77,51 @@ type RotationInfo struct {
 type MapRotation struct {
 	Current RotationInfo `json:"current"`
 	Next    RotationInfo `json:"next"`
+}
+
+type Tracker struct {
+    Global        GlobalData      `json:"global"`
+    Realtime      RealtimeData    `json:"realtime"`
+    Internal      InternalData    `json:"mozambiquehere_internal"`
+    Total         TotalData       `json:"total"`
+    ProcessingTime float64        `json:"processingTime"`
+}
+
+type GlobalData struct {
+    Name    string    `json:"name"`
+    Avatar  string    `json:"avatar"`
+    Rank    RankData2 `json:"rank"`
+}
+
+type RankData2 struct {
+    RankName  string  `json:"rankName"`
+}
+
+type RealtimeData struct {
+    SelectedLegend string  `json:"selectedLegend"`
+    CurrentState   string  `json:"currentState"`
+}
+
+type InternalData struct {
+    IsNewToDB   bool    `json:"isNewToDB"`
+}
+
+type TotalData struct {
+    Kills             TotalValue  `json:"kills"`
+    WinsSeason20      TotalValue  `json:"wins_season_20"`
+    Damage            TotalValue  `json:"damage"`
+    EnemiesScanned    TotalValue  `json:"enemies_scanned"`
+    SpecialEventKills TotalValue  `json:"specialEvent_kills"`
+    KillsSeason20     TotalValue  `json:"kills_season_20"`
+    KD                TotalValueKD  `json:"kd"`
+}
+
+type TotalValue struct {
+    Name string  `json:"name"`
+	Value int `json:"value"`
+}
+
+type TotalValueKD struct {
+    Name string  `json:"name"`
+	Value string `json:"value"`
 }

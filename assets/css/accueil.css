@@ -113,5 +113,5 @@ a:hover {
     -ms-transform: scale(1.18); 
     -webkit-transform: scale(1.18);
     transform: scale(1.18);
-    transition-duration: 1s;
+    transition-duration: .3s;
 }

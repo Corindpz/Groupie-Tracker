@@ -1,14 +1,13 @@
-{{define "tracker"}}
-<!DOCTYPE html>
+{{define "trackerstats"}}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/css/tracker.css">
+    <link rel="stylesheet" href="static/css/tracker_stats.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
-    <title>tracker</title>
+    <title>Player Info</title>
 </head>
 <body>
     <div class="header">
@@ -17,16 +16,18 @@
         <p class="github"><img class="icons" src="static/images/github.png" > Corindpz</p>
     </div>
     <div class="container">
-        <form id="tracker-form" action="/search_tracker" method="post">
-           <input type="text" id="pseudo" name="pseudo" placeholder="Entrez votre pseudo">
-           <input type="text" id="platform" name="platform" placeholder="Entrez votre plateforme">
-          <button type="submit"><img class="box" src="/static/images/box.png" ></button>
-        </form>
-    </div>
-    <div class="champs">
-        <img class="path" src="/static/images/path.png">
-        <img class="octane" src="/static/images/octane.png">
-    </div>
+    <h1>Player Name: <p>{{.Global.Name}}</h1>
+    
+    <h2>Rank Name: <p>{{.Global.Rank.RankName}}</p></h2>
+    <h2>Selected Legend: <p>{{.Realtime.SelectedLegend}}</p></h2>
+    <h2>Current State: <p>{{.Realtime.CurrentState}}</h2>
+    <h2>Total de kills: <p>{{.Total.Kills.Value}}</p></h2>
+    
+    <h2>Total de dégats: <p>{{.Total.Damage.Value}}</p></h2>
+    
+    <h2>KD:  <p>{{.Total.KD.Value}}</p></h2>
+    
+</div>
 </body>
 </html>
 {{end}}
