@@ -1,3 +1,10 @@
 # Groupie Tracker
+Un Apex Tracker utilisant une API non officielle. 
 
-clé api : 628edc01-a4d4-433d-a9ef-99eb6201af6a
+fonctionnalités : 
+
+- Boutique
+- Voir la rotation des prochaines maps
+- Jeu interactif ou il s'agit de predire la prochaine zone
+- Tracker de joueurs
+- Actus du jeu
