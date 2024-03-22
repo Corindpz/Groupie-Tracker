@@ -1,6 +1,8 @@
 # Groupie Tracker
 Un Apex Tracker utilisant une API non officielle. 
 
+clé envoyée sur teams.
+
 fonctionnalités : 
 
 - Boutique
