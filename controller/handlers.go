@@ -27,7 +27,6 @@ func SearchTrackerPage(w http.ResponseWriter, r *http.Request) {
 	apiURL := "https://api.mozambiquehe.re/bridge?platform=" + platform + "&player=" + pseudo + "&auth=96b5ef5aff1825ee880530ccf48efd82"
 
 	fmt.Println("API URL:", apiURL)
-	fmt.Println("iciciciciciciiciiciciciicicic")
 
 	tracker, err := backend.FetchTrackerData(apiURL)
 	if err != nil {
