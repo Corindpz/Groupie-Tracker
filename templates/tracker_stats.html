@@ -16,7 +16,12 @@
         <p class="github"><img class="icons" src="static/images/github.png" > Corindpz</p>
     </div>
     <div class="container">
-    <h1>Player Name: <p>{{.Global.Name}}</h1>
+        <form action="/favorites" method="post">
+            <input type="hidden" name="name" value="{{.Global.Name}}">
+            <button class="pack" type="submit"><img class="noeil" src="/static/images/pack.png" alt="accueil"></button>
+        </form>
+    <div class="canette">
+    <h2>Player Name: <p>{{.Global.Name}}</h2>
     
     <h2>Rank Name: <p>{{.Global.Rank.RankName}}</p></h2>
     <h2>Selected Legend: <p>{{.Realtime.SelectedLegend}}</p></h2>
@@ -26,7 +31,7 @@
     <h2>Total de dégats: <p>{{.Total.Damage.Value}}</p></h2>
     
     <h2>KD:  <p>{{.Total.KD.Value}}</p></h2>
-    
+    </div>
 </div>
 </body>
 </html>

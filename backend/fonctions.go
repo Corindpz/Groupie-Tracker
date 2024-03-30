@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"errors"
+	"os"
 )
 
 func FetchStoreData(apiURL string) ([]Bundle, error) {
@@ -66,6 +67,25 @@ func FetchTrackerData(apiURL string) (Tracker, error) {
     return tracker, nil
 }
 
+func ReadFavorites() (Favorite, error) {
+	file, err := os.Open("favs.json")
+	if err != nil {
+		return Favorite{}, err
+	}
+
+	fmt.Println("Fichier ouvert")
+	defer file.Close()
+
+
+	var fav Favorite
+
+	err = json.NewDecoder(file).Decode(&fav)
+	if err != nil {
+		return Favorite{}, err
+	}
+
+	return fav, nil
+}
 
 func FetchNewsData(apiURL string) ([]News, error) {
 	resp, err := http.Get(apiURL)

@@ -17,6 +17,8 @@ func Initserv() {
 	http.HandleFunc("/tracker", controller.TrackerPage)
 	http.HandleFunc("/", controller.ErrorPage)
 	http.HandleFunc("/search_tracker", controller.SearchTrackerPage)
+	http.HandleFunc("/favorite", controller.HandleFavorite)
+	http.HandleFunc("/favorites", controller.FavoritesPage)
 	log.Println("Serveur lancé")
 	http.ListenAndServe(":8080", nil)
 	log.Fatal("Serveur arrêté")

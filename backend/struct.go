@@ -125,3 +125,7 @@ type TotalValueKD struct {
     Name string  `json:"name"`
 	Value string `json:"value"`
 }
+
+type Favorite struct {
+	JoueurFav []string `json:"joueurFav"`
+}

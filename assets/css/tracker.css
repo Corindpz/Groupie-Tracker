@@ -5,6 +5,12 @@
     margin: 0;
 }
 
+.pack{
+    width: 2em;
+    position: absolute;
+    padding-left: 10px;
+}
+
 html {
   font-family: "Teko", sans-serif;
   font-optical-sizing: auto;
@@ -71,6 +77,20 @@ button:hover{
     -webkit-transform: scale(1.18);
     transform: scale(1.18);
     transition-duration: .3s;
+}
+
+.favs{
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    position: absolute;
+    left: 5%;
+    top: 20%;
+}
+
+.favs:hover{
+    color: rgb(224, 61, 61);
+    transform: scale(1.1);
 }
 
 
